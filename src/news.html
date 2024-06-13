@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduScience</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="d-flex align-items-center p-3 bg-light" style="background-color: #a5ccf3;">
+        <img src="img/logo.png" alt="Логотип" id="logo" class="mr-3">
+        <h1>EduScience</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #a5ccf3;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Головна</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Про сайт</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                <li class="nav-item"><a class="nav-link active" href="news.html">Новини</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="my-4">
+            <h2>Останні новини</h2>
+            <div id="news-container"></div>
+        </section>
+    </main>
+    <footer class="bg-light p-3 text-center" style="background-color: #a5ccf3;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #a5ccf3;">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">Контакти:</a></li>
+                    <li class="nav-item">+38 096 8814 321</a></li>
+                    <li class="nav-item">eduscience2024@gmail.com</a></li>
+                    <li class="nav-item"><a class="link" href="https://www.facebook.com/MinistryofDefence.UA/?locale=uk_UA">Facebook</a></li>
+                    <li class="nav-item"><a class="link" href="https://t.me/DeepStateUA">Telegram</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>&copy; 2024 Synenko Andrii</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/react.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      const news = [
+    { 
+        title: 'АНОНС: Науково-дослідний семінар з біотехнологій у Львівському національному університеті', 
+        content: '22 червня у Львівському національному університеті відбудеться науково-дослідний семінар, присвячений новітнім розробкам у галузі біотехнологій. Відомі вчені з усього світу поділяться своїм досвідом та останніми дослідженнями.', 
+        image: 'img/news1.jpg', 
+        date: '22.06.2024' 
+    },
+    { 
+        title: 'АНОНС: Конференція з квантової фізики в Київському національному університеті', 
+        content: 'Наступного тижня, 25 червня, в Київському національному університеті відбудеться конференція з квантової фізики. Захід збере провідних фахівців у галузі для обговорення останніх досягнень та перспектив розвитку квантових технологій.', 
+        image: 'img/news2.jpg', 
+        date: '25.06.2024' 
+    },
+    { 
+        title: 'АНОНС: Наукова конференція в КНУ: Суспільні науки та глобалізація', 
+        content: '30 червня у Київському національному університеті відбудеться наукова конференція, присвячена впливу глобалізації на суспільні науки. Дослідники з різних країн обговорять ключові проблеми та можливості, що виникають у зв\'язку з глобальними змінами.', 
+        image: 'img/news3.jpg', 
+        date: '30.06.2024' 
+    },
+    { 
+        title: 'Конференція з нанотехнологій в Харківському національному університеті', 
+        content: '15 червня в Харківському національному університеті відбулася конференція з нанотехнологій. Вчені з різних країн поділилися своїми досягненнями у сфері наноматеріалів та їх застосування в медицині.', 
+        image: 'img/news4.jpg', 
+        date: '15.06.2024' 
+    },
+    { 
+        title: 'Семінар з інформатики у Дніпровському державному університеті', 
+        content: '10 червня в Дніпровському державному університеті пройшов семінар з інформатики, де були розглянуті нові підходи до розробки програмного забезпечення та кібербезпеки.', 
+        image: 'img/news5.jpg', 
+        date: '10.06.2024' 
+    },
+    { 
+        title: 'Конференція з екологічної біології в Одеському національному університеті', 
+        content: '5 червня в Одеському національному університеті пройшла конференція, присвячена екологічній біології. Учасники обговорили проблеми зміни клімату та збереження біорізноманіття.', 
+        image: 'img/news6.jpg', 
+        date: '05.06.2024' 
+    },
+    { 
+        title: 'Міжнародна конференція з математики в Чернівецькому національному університеті', 
+        content: '1 червня в Чернівецькому національному університеті відбулася міжнародна конференція з математики, на якій були представлені нові дослідження в галузі алгебри та математичного аналізу.', 
+        image: 'img/news7.jpg', 
+        date: '01.06.2024' 
+    },
+    { 
+        title: 'Конференція з генетики в Сумському державному університеті', 
+        content: '25 травня в Сумському державному університеті відбулася конференція з генетики, де обговорювалися нові відкриття у сфері генетичних досліджень та їх вплив на медицину.', 
+        image: 'img/news8.jpg', 
+        date: '25.05.2024' 
+    },
+    { 
+        title: 'Науково-технічний форум у Запорізькому національному університеті', 
+        content: '20 травня в Запорізькому національному університеті пройшов науково-технічний форум, присвячений новітнім розробкам у галузі інженерії та технічних наук.', 
+        image: 'img/news9.jpg', 
+        date: '20.05.2024' 
+    },
+    { 
+        title: 'Конференція з астрономії в Ужгородському національному університеті', 
+        content: '15 травня в Ужгородському національному університеті відбулася конференція з астрономії, на якій вчені обговорили останні відкриття у дослідженні космосу та розвиток астрофізики.', 
+        image: 'img/news10.jpg', 
+        date: '15.05.2024' 
+    }
+];
+
+        function NewsItem({ title, content, image, date }) {
+            return (
+                <div className="news-item mb-4">
+                    <img src={image} alt={title} className="news-image" />
+                    <h3>{title}</h3>
+                    <p><small>{date}</small></p>
+                    <p>{content}</p>
+                </div>
+            );
+        }
+
+        function NewsList() {
+            return (
+                <div>
+                    {news.map((item, index) => (
+                        <NewsItem key={index} title={item.title} content={item.content} image={item.image} date={item.date} />
+                    ))}
+                </div>
+            );
+        }
+
+        ReactDOM.render(<NewsList />, document.getElementById('news-container'));
+    </script>
+</body>
+</html>
